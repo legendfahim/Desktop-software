@@ -1,0 +1,17 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.example.dconvert
+win:
+  target: nsis
+  icon: logo.ico
+files:
+  - filter:
+      - dist/**/*
+      - assets/**/*
+      - main.js
+      - index.html
+      - renderer.js
+      - style/output.css
+      - logo.ico
+electronVersion: 30.0.8

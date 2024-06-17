@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DConvert</title>
+    <meta
+      name="description"
+      content="A Simple Software for Temperature Degrees Conversion|| Developed by Istiak Rahman"
+    />
+    <link rel="stylesheet" href="./style/output.css" />
+    <link rel="shortcut icon" href="./logo.ico" type="image/x-icon" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body class="h-screen flex flex-col items-center">
+    <div
+      class="container my-2 mx-auto p-8 bg-gray-200 shadow-lg w-[60%] h-[70%] rounded-sm"
+    >
+      <h1 class="text-3xl text-red-400 text-center mb-8">Degrees Converter</h1>
+      <div class="flex flex-row justify-center items-center">
+        <!-- Input value -->
+        <input
+          id="temperatureInput"
+          type="number"
+          placeholder="Enter temperature"
+          class="form-input mr-4 w-[14rem] h-[2.5rem] rounded-md p-2"
+        />
+        <select
+          id="unitSelect"
+          class="form-select w-[14rem] h-[2.5rem]  rounded-md"
+        >
+          <option value="celsius">Celsius to Fahrenheit</option>
+          <option value="fahrenheit">Fahrenheit to Celsius</option>
+        </select>
+      </div>
+      <!-- Display  -->
+      <div
+        id="convertedTemperature"
+        class="mt-4 text-xl h-10 text-center w-fit mx-auto"
+      ></div>
+      <div class="btn flex justify-center">
+        <button
+          class="p-2 my-5 w-[10rem] rounded-md duration-500 bg-blue-300 hover:bg-blue-500"
+          onclick="convertTemperature()"
+        >
+          Convert
+        </button>
+        <button
+          class="p-2 my-5 ml-2 w-[10rem] rounded-md duration-500 bg-green-300 hover:bg-green-500"
+          onclick="clearResult()"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+    <footer>
+      <p class="text-center text-gray-400 my-2">
+        Made with ❤️ by Istiak Rahman
+      </p>
+    </footer>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
